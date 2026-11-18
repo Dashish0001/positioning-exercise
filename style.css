@@ -1,0 +1,354 @@
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  min-height: 1500px;
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f5;
+}
+
+
+/* =========================
+   PAGE HEADER - STICKY
+========================= */
+
+.page-title {
+  font-size: 22px;
+  color: #333;
+  margin: 0 0 25px;
+  padding: 15px 10px;
+  border-bottom: 2px solid #e9ecef;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background-color: #f1f3f5;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+  height: 230px;
+  background-color: #e9ecef;
+  position: relative;
+}
+
+
+/* SVG IMAGE */
+
+.shoe {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* =========================
+   SALE BADGE
+========================= */
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+
+  border: 2px solid #330505;
+  border-radius: 2px;
+
+  color: aliceblue;
+  background-color: #bc1313;
+
+  padding: 5px 10px;
+  font-weight: bold;
+
+  transition: background-color 0.3s ease;
+}
+
+.sale-badge:hover {
+  background-color: #03371f;
+}
+
+
+/* =========================
+   WISHLIST BUTTON
+========================= */
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: white;
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.wishlist:hover {
+  color: #bc1313;
+}
+
+
+/* =========================
+   PRODUCT INFORMATION
+========================= */
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-info h3 {
+  font-size: 21px;
+}
+
+.product-info del {
+  color: #999;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+
+/* =========================
+   ADD TO CART BUTTON
+========================= */
+
+.buy-button {
+  width: 100%;
+  padding: 12px;
+
+  background-color: #222;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #444;
+}
+
+
+/* =========================
+   FLOATING CART - FIXED
+========================= */
+
+.floating-cart {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 20;
+
+  width: auto;
+  padding: 14px 24px;
+
+  background-color: #6c35c5;
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  transition: background-color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.floating-cart:hover {
+  background-color: #4b2194;
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .shoe {
+    width: 170px;
+    height: 170px;
+  }
+
+  .floating-cart {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+
+/* ===== PREMIUM COLOR THEME ===== */
+
+body {
+  background-color: #f4f6fa;
+  color: #172033;
+}
+
+.page-title {
+  color: #172554;
+  border-bottom-color: #dce3ed;
+  background-color: #f4f6fa;
+}
+
+.product-card {
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(23, 37, 84, 0.08);
+}
+
+.product-card:hover {
+  box-shadow: 0 12px 28px rgba(23, 37, 84, 0.14);
+}
+
+.product-image {
+  background-color: #eaf0f6;
+}
+
+.sale-badge {
+  background-color: #d97706;
+  border-color: #b45309;
+  color: #ffffff;
+}
+
+.sale-badge:hover {
+  background-color: #b45309;
+}
+
+.product-info h2 {
+  color: #172554;
+}
+
+.product-info p {
+  color: #64748b;
+}
+
+.product-info h3 {
+  color: #0f172a;
+}
+
+.product-info del {
+  color: #94a3b8;
+}
+
+.buy-button {
+  background-color: #172554;
+}
+
+.buy-button:hover {
+  background-color: #2563eb;
+}
+
+.wishlist:hover {
+  color: #e11d48;
+}
+
+.floating-cart {
+  background-color: #0f766e;
+  box-shadow: 0 5px 15px rgba(15, 118, 110, 0.25);
+}
+
+.floating-cart:hover {
+  background-color: #115e59;
+}
